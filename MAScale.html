@@ -13081,6 +13081,7 @@ div#notebook {
 <h2 id="Objective:">Objective:<a class="anchor-link" href="#Objective:">&#182;</a></h2><hr>
 <ul>
 <li>This project was conduted to develop and validate a math anxiety rating scale for korean college students through exploratory factor analysis, a reliability analysis, and confirmatry factor analysis.</li>
+<li>Link of the paper published: <a href="https://www.researchgate.net/publication/318311512_Development_and_validation_of_the_Korean_mathematics_anxiety_rating_scale_for_college_students">https://www.researchgate.net/publication/318311512_Development_and_validation_of_the_Korean_mathematics_anxiety_rating_scale_for_college_students</a></li>
 </ul>
 <hr>
 <h2 id="Context:">Context:<a class="anchor-link" href="#Context:">&#182;</a></h2><hr>
@@ -16235,18 +16236,14 @@ memory usage: 35.9 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[182]:</div>
+<div class="prompt input_prompt">In&nbsp;[297]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#An independent t test comparing males and females</span>
 <span class="c1">#Levene&#39;s test for equality of variances</span>
 
-<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">levene</span>
-<span class="n">Males</span> <span class="o">=</span> <span class="n">df_e</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">108</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
-<span class="n">Females</span> <span class="o">=</span> <span class="n">df_e</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">108</span><span class="p">:</span><span class="mi">229</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
-
-<span class="n">stat</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">levene</span><span class="p">(</span><span class="n">Males</span><span class="p">,</span> <span class="n">Females</span><span class="p">)</span>
-<span class="n">p</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">levene</span><span class="p">(</span><span class="n">df_e</span><span class="p">[</span><span class="s1">&#39;Total Math Anxiety&#39;</span><span class="p">][</span><span class="n">df_e</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Male&#39;</span><span class="p">],</span>
+             <span class="n">df_e</span><span class="p">[</span><span class="s1">&#39;Total Math Anxiety&#39;</span><span class="p">][</span><span class="n">df_e</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Female&#39;</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -16259,13 +16256,13 @@ memory usage: 35.9 KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[182]:</div>
+    <div class="prompt output_prompt">Out[297]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.45229544104443964</pre>
+<pre>LeveneResult(statistic=0.5668449979436155, pvalue=0.45229544104443964)</pre>
 </div>
 
 </div>
@@ -16402,19 +16399,13 @@ memory usage: 35.9 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[264]:</div>
+<div class="prompt input_prompt">In&nbsp;[295]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#An independent t test comparing two majors</span>
 <span class="c1">#Levene&#39;s test for equality of variances</span>
-
-<span class="n">Human</span> <span class="o">=</span> <span class="n">df_e</span><span class="p">[</span><span class="n">df_e</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Humanitics&amp;SocialSci&#39;</span><span class="p">]</span>
-<span class="n">Human</span> <span class="o">=</span> <span class="n">Human</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">6</span><span class="p">]</span>
-<span class="n">Engi</span> <span class="o">=</span> <span class="n">df_e</span><span class="p">[</span><span class="n">df_e</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Engineering&amp;NaturalSci&#39;</span><span class="p">]</span>
-<span class="n">Engi</span> <span class="o">=</span> <span class="n">Engi</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">6</span><span class="p">]</span>
-
-<span class="n">stat</span><span class="p">,</span> <span class="n">pp</span> <span class="o">=</span> <span class="n">levene</span><span class="p">(</span><span class="n">Human</span><span class="p">,</span> <span class="n">Engi</span><span class="p">)</span>
-<span class="n">pp</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">levene</span><span class="p">(</span><span class="n">df_e</span><span class="p">[</span><span class="s1">&#39;Total Math Anxiety&#39;</span><span class="p">][</span><span class="n">df_e</span><span class="p">[</span><span class="s1">&#39;Majortwo&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Humanitics&amp;SocialSci&#39;</span><span class="p">],</span>
+             <span class="n">df_e</span><span class="p">[</span><span class="s1">&#39;Total Math Anxiety&#39;</span><span class="p">][</span><span class="n">df_e</span><span class="p">[</span><span class="s1">&#39;Majortwo&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Engineering&amp;NaturalSci&#39;</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -16427,13 +16418,13 @@ memory usage: 35.9 KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[264]:</div>
+    <div class="prompt output_prompt">Out[295]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.02507331668240991</pre>
+<pre>LeveneResult(statistic=5.0869100794257935, pvalue=0.02507331668240991)</pre>
 </div>
 
 </div>
@@ -16444,11 +16435,11 @@ memory usage: 35.9 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[266]:</div>
+<div class="prompt input_prompt">In&nbsp;[293]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#An independent t test</span>
-<span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">Human</span><span class="p">,</span> <span class="n">Engi</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">equal_var</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;propagate&#39;</span><span class="p">)</span>
+<span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">Human</span><span class="p">,</span> <span class="n">Engi</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">equal_var</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;propagate&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -16461,13 +16452,13 @@ memory usage: 35.9 KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[266]:</div>
+    <div class="prompt output_prompt">Out[293]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Ttest_indResult(statistic=5.031805669955151, pvalue=9.966554185137191e-07)</pre>
+<pre>Ttest_indResult(statistic=5.656743718219696, pvalue=1.6011542249545797e-07)</pre>
 </div>
 
 </div>
