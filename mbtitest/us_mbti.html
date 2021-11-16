@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+    
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI 별 한달 살기 여행지 추천</title>
+    <meta name ="description" content = "내 성격 유형에 맞는 한달 살기 장소는?">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="내 MBTI 별 한달 살기 여행지">
+    <meta property="og:description" content="나랑 맞는 한달 살기 여행지를 MBTI를 기반으로 추천해주는 테스트입니다.">
+    <meta property="og:image" content="https://travel4amonth.netlify.app/logo.png">
+    <meta property="og:url" content="https://travel4amonth.netlify.app/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7310241164176948"
+     crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body class = "container">
+
+     
+    <article class = "start">    
+        <img class="center mt-4" src="logo2.png" alt = "logo">
+  
+        <h1 class = "main-title mt-3 text-center">한달 살기! 내 MBTI와 맞는 도시는?</h1>
+        <h2 class="sub-title mt-3 text-center">코로나만 끝나라! 어디로 가볼까?</h1>
+
+        <div class="start-cover mt-3 mb-3">
+           <button type="button" class="btn-start btn btn-primary" onclick='start();'>내게 맞는 한달 살기 추천 테스트 시작!</button>
+        </div>
+
+    </article>
+
+    <article class= "loading">
+        <div class = "loader">
+    </div>
+    <p></p>    <p></p>    <p></p>    <p></p>    <p></p>    <p></p>  
+    <p></p>
+    <span class="result-yourtype text-center mt-5">결과 계산 중...</span>
+
+    <div class = "container" style = "display:none">
+
+    </div>
+    </article>
+
+    <article class = "question">
+        <img class="center2 mt-2" src="logo2.png" alt = "logo"> 
+        <div class="progress mt-2">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: calc(100/20*1%)" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+      <input id = "type" type= "hidden" value = "EI">
+   
+        <img class="mt-5 slash-element" src="quotation1.png" alt="slash-element">
+        <h2 id="title" class="question-content text-center mt-2 mb-4">문제</h2>
+        <img class="slash-element" src="quotation2.png" alt="slash-element">
+        <input id="type" type="hidden" value="EI">
+        <button id="A" type="button" class="btn-answer btn btn-primary pt-5 pb-5">대답A</button>
+        <button id="B" type="button" class="btn-answer btn btn-primary pt-5 pb-5">대답B</button>
+        <p></p> <p></p> <p></p><p></p> <p></p> 
+        </div>
+
+
+    </article>
+
+    <article class = "result">
+      <span class="result-message mt-4 mb-4">당신의 MBTI에 맞는 한달 살기 지역은 바로...!</span>
+    
+        <img id = "img" class="border border-white mt-2" src = "Bali.jpeg" alt="yourtype">
+        <h2 id = "yourtype" class="result-yourtype text-center mt-5">MBTI</h2>
+        <h3 id="explain" class="result-explain text-center mt-5">설명</h3>
+        <h4 id="explain2" class="result-explain2 text-center mt-5">부가설명</h4> 
+        <h5 id="explain3" class="result-explain3 text-center mt-4">순위2</h5> 
+        <h6 id="explain4" class="result-explain3 text-center mt-3">순위3</h6> 
+        <h7 id="explain5" class="result-explain5 text-center mt-5">최고궁합</h7>
+        <h8 id="explain7" class="result-explain7 text-center mt-3">최고여행지</h8> 
+        <h9 id="explain6" class="result-explain6 text-center mt-4">최악궁합</h9> 
+        <p></p>
+     <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+        <div class="share addthis_inline_share_toolbox mt-5"></div>
+        <p></p> <p></p> <p></p><p></p> <p></p> 
+    </article>
+
+    <article class="logo">
+       <span class="mt-5 text-center copyright-text">Copyright 2021 Tikiwiki all rights reserved</span>
+       <p></p><p></p>
+    </article>
+ 
+
+    <input type = "hidden" id = "EI" value = "0">
+    <input type = "hidden" id = "SN" value = "0">
+    <input type = "hidden" id = "TF" value = "0">
+    <input type = "hidden" id = "JP" value = "0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script>
+        var num = 1;
+        var q = {
+            1: {"title":"불타는 금요일 밤을 앞둔 아침. 나는?", "type": "JP", "A": "주말에 무엇을 할 소 있는 지 정보를 조사하고 예약이 필요하면 한다.", "B": "그날 기분 내키는 대로 실행에 옮긴다."},
+            2: {"title":"새로운 곳에 가서 살게 된다면 어떤 생각이 들까?", "type": "SN", "A": "집세, 교통, 치안, 볼거리, 맛집이 궁금하다.", "B": "살게 될 집, 라이프 스타일, 이웃들과의 관계, 근처 식물 동물 등 오만가지 상상을 하게 된다."},
+            3: {"title":"나는...", "type": "EI", "A": "말 하면서 정리하는 타입", "B": "일단 생각 다 해놓고 공개하는 타입"},
+            4: {"title":"오리엔테이션에 가서 새로운 사람을 만나야 한다. 나는?", "type": "EI", "A": "긴장되지만 사람들을 새로 사귀는 건 어렵지 않다.", "B": "가서 억지 웃음 지으며 새로운 사람들과 친해지려 노력할 걸 생각하면 힘들다."},
+            5: {"title":"프로젝트를 시작하게 됐다. 나는?", "type": "JP", "A": "진행 스케줄과 계획 단계를 세워 놓고 일을 시작하면 더 잘된다.", "B": "처음 시작에 필요한 일을 우선 하면서 그때 그때 필요한 일들을 알아보며 한다."},
+            6: {"title":"좋아하는 친구들과 1박 2일 여행을 다녀왔다. 일반적으로 나는?", "type": "EI", "A": "스트레스가 확 풀렸다.", "B": "재밌었지만 기도 빨렸다. 에너지 충전을 위해 혼자 있는 시간을 보내고 싶다. "},
+            7: {"title":"내가 더 싫어하는 윗 사람은?", "type": "TF", "A": "앞뒤가 맞지 않는 비논리적인 이야기를 하며 화를 내는 유형", "B": "나를 싫어하는 것 같은, 냉정하고 공격적인 유형"},
+            8: {"title":"내가 더 동의하는 생각은?", "type": "TF", "A": "감정은 비이성적이고 주관적이다. 감정이 앞서 일을 그르치는 것은 어리석다.", "B": "주어진 상황과 사람들의 반응을 고려하지 않고 논리만 내세우는 것이 더 어리석다."},
+            9: {"title":"내가 학생 때 좋아했던 과목은?", "type": "SN", "A": "사실과 현상을 다루는 과목 ", "B": "이론을 다루는 과목"},
+            10: {"title":"내가 더 싫어하는 리더는?", "type": "JP", "A": "체계와 틀 없이 애매한 방향성만 이야기하는 리더", "B": "융통성 없이 계획과 규칙의 준수만 강박적으로 중시하는 리더"},
+            11: {"title":"말을 할 때나 행동 모사를 할 때 나는? ", "type": "EI", "A": "몸짓 사용과 목소리도 크고 표정 변화가 많고, 말의 내용도 많다.", "B": "목소리, 몸짓 사용이 많지 않고 말도 아껴서 하는 편이다."},
+            12: {"title":"'긴급한 사정으로 쉽니다' 라는 팻말을 보면 나는? ", "type": "TF", "A": "사정이 있으면 다른 방법이 있을 텐데 영업 시간에 문을 닫는 건 신용에 좋지 않다고 생각한다.", "B": "어쩔 수 없는 긴급한 일이 생겼나 보다. 안타깝다는 생각이 든다."},
+            13: {"title":"내가 더 적응하기 어려운 것은?", "type": "JP", "A": "계속되는 변화", "B": "반복되는 일상"},
+            14: {"title":"내가 하고 싶은 자취 생활은?", "type": "SN", "A": "특별한 나만의 자취 생활을 따로 꿈꿔본 적은 없다.", "B": "해먹고 싶은 요리, 특별한 인테리어, 재밌는 취미 등 생각 해놓은 게 많다."},
+            15: {"title":"내가 더 되고 싶은 사람은?", "type": "TF", "A": "유능한 사람", "B": "따뜻한 사람"},
+            16: {"title":"혼자 집에 있다보면 나는?", "type": "EI", "A": "점차 외롭고 우울해진다.", "B": "에너지가 충전되고 마음이 안정된다. "},
+            17: {"title":"토론 자리에서 나는? ", "type": "SN", "A": "오늘 해야 할 과제와 제시된 아이디어들이 무엇인지 정리하는 역할을 잘한다. ", "B": "새로운 아이디어와 가능성을 제안하는 편이다. "},
+            18: {"title":"내가 듣고 싶은 칭찬은?", "type": "TF", "A": "정말 잘했어. 특히 이 부분에서 뛰어난 실력이 보여서 좋았어.", "B": "정말 수고 많았고 누구보다 열정적인 너를 제일 아껴."},
+            19: {"title":"규칙이 많은 조직에 있는 상황이라면?", "type": "JP", "A": "규칙의 준수로 인해 나도 안정감과 소속감을 느낄 것 같다.", "B": "딱 질색이다. 숨이 막힐 것 같다."},
+            20: {"title":"미술 시간에 나는?", "type": "SN", "A": "따라 그리기, 만들기, 종이 접기를 좋아했다. ", "B": "상상화 등 아이디어를 표현하는 과정에 관심이 많았다."}}
+
+    
+        var result = {
+            해외 생활을 하는 것에 대해 약간은 두려움이 있을 수 있어요. 예측할 수 없는 상황이 두렵기 때문이에요. 그래서 어디에 살게 될 지 정해지면 꼼꼼하게 살게 될 곳에 대해 공부해요. 날씨는 어떤 지, 문화는, 인종은, 물가는 어떤지 등등! 아마 이사를 가기 전부터 인터넷으로 살게 될 집을 꼼꼼히 알아보고 되도록이면 방문해서 집을 구하고 싶어할 것 같네요. 어디에 살게 되던지 간에 규칙의 준수가 확실하고 논리가 잘 통하는 지역에서 본인의 공간을 잘 확보하여 지낼 수 있는 지역을 선호합니다. 집 계약이나 생활 시에도 계약 조건이나 법 준수 등의 조건이 깔끔하게 지켜질 만한 곳이 맞아요. 반면 논리가 통하지 않고 예측이 잘 되지 않는 정보가 잘 없는 곳에서 사는 것을 다른 사람들보다 좀 더 괴로워 할 수 있고 적응 시간도 좀 더 걸릴 수 있습니다. 그렇기에 너무 복잡하고 많은 사람들이 살지 않으면서도 도시의 체계와 규칙이 확실한 깔끔한 도시에 사는 것을 추천합니다. 혹은 대형 도시 옆의 깔끔한 교외 지역 도시도 잘 맞을 것 같네요.
+            겉보기에는 내향적이지만, 내면 깊은 곳에는 야생마 같은 여행 본능이 있어요. 그래서 처음에는 두려움이 있을 수 있지만, 점점 프로 자취러가 됩니다. 해외 생활에서 발생할 수 있는 예기치 못한 상황도 대담하고 융통성 있게 해결할 줄 아는 멋있는 유형이에요. 광활하고 다양한 자극이 있는 자연 환경에서 취미 생활과 힐링도 즐길 수 있는 곳에 살면 잘 맞습니다. 주변에 쉽게 갈 수 있는 산이나 바다 등의 장소들이 많으면 더 좋을 것 같네요. 너무 딱딱하고 번잡한 그리고 인간미 없는 도시는 덜 맞아요. 
+사람들과 화합하며 지역사회와 주변 사람들에게 도움을 주는 것에 의미를 느끼는 유형이기 때문에 해외 생활을 해도 종교, 단체, 봉사 활동을 하려고 하는 유형입니다. 대부분의 사람들이 정신없고 바쁘게 살아가는 대도시보다는 소규모 지역 사회가 있는 소도시가 더 잘 맞을 수 있는 유형이에요! 해외 생활이라도 사람 냄새 나는 작은 도시에서 살아가면 삶의 의미를 더 느낄 수 있겠어요. 지역 주민들도 친절하다는 평이 있는 곳으로 가면 더 삶의 안정감을 느낄 수 있겠네요.
+번잡하고, 시끄럽고, 냉정한 도시보다는 자유롭고 힙한 느낌이 나는 소도시에서 생활을 하는 걸 더 좋아하는 타입이에요. 감각 경험을 중시하고 예술적인 면모가 있는 유형이기 때문에 자극이 부족한 지루한 시골 보다는 아기자기 하면서도 고유의 힙한 분위기가 살아있는 중소도시를 추천드립니다. 문화와 예술의 흔적과 유산을 흠뻑 느낄 수 있는 곳이라면 더 잘 맞겠네요.
+늘 상상하며 계획하면서 사는 INTJ에게는 미국의 중간 규모 도시에 사는 게 아주 잘 맞을 수 있어요. 미국은 대도시가 아니면 자가용으로 모두 이동하고 교통 체증이 거의 없기 때문입니다. 그러면서도 새로운 장소에서 자유로운 시간을 보내는 것을 추구하기에도 좋죠. 조금만 시간을 내면 원하는 곳에 대부분 갈 수 있는, 대도시가 비교적 가까운 곳이면 더 좋겠네요. 지적 호기심이 많은 유형이기 때문에 대학교와 박물관, 문화 유산이 많은 교육 도시도 잘 맞아요! 
+INTP는 사람많고 복잡한 대도시도 맞지 않지만 지나치게 전원적인 시골도 맞지 않아요. 어디가 되었든 반복된 틀과 일상을 지루해 하는 유형이기 때문이에요. 효율적인 일상을 즐길 수 있으면서도 주말이면 가볍게 떠날 수 있는 여행지나 힐링 장소가 여러 개 있는 곳이면 훨씬 행복도가 올라갈 것입니다.  길고 계획해야 되는 여행 보다는 가볍고 자유롭게 떠날 수 있는 곳이 많은 곳에 사는 것이 잘 맞아요. 철학, 사색, 의미 찾기 등에도 관심이 많기 때문에 인생의 큰 의미도 추구할 수 있으면서도 자유로운 삶도 만끽할 수 있는 중간 규모 도시나 대도시 근처 교외에 위치한 작은 도시에 거주하는 것이 잘 맞겠네요.
+INFJ는 번잡하고 시끄러운 도시보다는 소소한 재미가 있는 소도시를 더 좋아합니다. 그리고 역사, 문화, 지식 쌓기에 관심이 많기 때문에 박물관, 미술관, 유적지 등을 쉽게 갈 수 있는 곳이면 더 좋겠네요. 루틴을 지킬 수 있는 일상을 좋아하기 때문에 일상생활 자체는 조용하고 평화로운 마을에서 해도 잘 적응할 수 있는 유형이에요. 그래도 너무 심한 시골이면 외로움을 느낄 수 있기 때문에 적당한 중소 도시가 가장 편안한 마음으로 잘 지낼 수 있는 곳이겠네요!
+상상해왔던 곳에 가서 새로운 감정을 느껴보며 여유로운 시간을 보내는 자취생활을 꿈꾸는 것을 좋아하는 유형입니다. 어느 지역에 살게 되도 소소한 자극들을 보며 사진과 기록을 남기며 의미를 새기는 유형입니다. 게다가 집돌이, 집순이 기질이 있기 때문에 집 밖 보다는 집 안 환경이 더 중요하죠. INFP에게는 살게 될 곳이 자신에게 어떤 기준으로든 '정을 붙이고 살 만한 곳인지'가 매우 중요합니다. 좋은 친구가 있던, 좋은 상사가 있는 직장이 있던 그게 무엇이든 그 어떤 것이 있다면 한 곳에 꽤 오랜 시간 정착해서 지낼 수 있는 유형입니다. 그렇지만 정을 붙이지 못한다면 상처를 받고 실망을 느낄 유형이지요. 이사를 하기 전에 찬찬히 여러 지역을 인터넷으로라도 둘러보면서 나와 정말 잘 맞는 곳일지 생각해 보는 시간을 갖는 것을 추천드립니다.  
+ESTJ 는 고도 문명사회를 좋아합니다.  원하는 서비스나 인프라를 가까운 데서 찾기 어려운 시골은 맞지 않을 수 있죠. 그런데 ESTJ는 교통 체증, 비논리, 무계획도 싫어합니다. 너무 많은 사람들이 혼란 스럽게 뒤엉커 사는 대도시가 맞지 않을 수 있는 이유입니다. 행정 도시, 깔끔한 도시, 규칙의 준수가 중요한 도시에서 자신의 목표를 이루어 나가는 멋진 삶을 추구하며 사는 것이 답입니다. 
+다양한 자극과 신나는 이벤트를 좋아하는 ESTP에게 미국의 시골 살이는 아주 답답하게 여겨 질 수 있습니다. 시골에 살게 됐다가는 몸만 시골에 있지 주말만 되면 도시에서 무엇을 하러 자꾸 떠나게 되는 생활을 하게 될 수도 있어요. 그것도 불가능한 곳에 있게되면 우울함에 빠질 수 있습니다. 시골의 여유로운 평화로움이 이들에게는 느리고 답답한 그리고 시대에 뒤떨어진 것 같은 두려움을 느끼게 할 수 있어요. 다양한 체험을 할 수 있는 대도시에 사는 게 맞는 유형입니다. 
+ESFJ 유형은 살게 될 곳이 도시인지, 시골인지 여부 보다는 주변 사람들과 얼마나 잘 네트워킹하고 친목 도모를 하며 지낼 수 있는 지가 더 중요합니다. 중소 도시에 살게되더라도 여러 명의 친한 이웃 사람들과 교류할 수 있는 환경이면 충분히 행복하게 잘 지낼 수 있으나, 대도시여도 마음 붙일 곳을 못 찾으면 외로움과 우울함을 느낄 수 있습니다. 다양한 배경의 친구를 잘 사귈 수 있는 유형이기 때문에 어디든 새로운 곳에 가서 살게 되면 자신의 자아 효능감을 찾을 수 있도록 도와주는 단체, 봉사활동, 모임 등에 가서 친구들을 만들면 잘 지낼 수 있는 유형입니다.
+흥부자 유형인 ESFP에게 미국 시골은 맞지 않는 단어입니다. 사람들의 관심사, 트렌드에 관심이 많은 유형인데 자극 없고 매일 똑같은 일상을 유지하는 환경에 사는 것은 고문과 같을 수 있겠어요. 사람들이 움직이고 원하는 인기가 있는 그 곳에 가 있고 싶어하는 유형이기 때문에 대도시, 그중에서도 트렌디하고 역동적인 도시가 잘 맞아요. 
+자기 분야에서 앞서 나가는 사람이 되는 것을 강하게 원하는 ENTJ 유형은 대도시에 살며 정보의 흐름을 업데이트하고 경쟁에서 뒤쳐지지 않기를 원합니다. 시골 생활이 따분해서 싫다기 보다는 자신의 분야를 리드하는 사람들의 '주 무대'에서 살고있지 않는 것이 더 불만으로 느껴질 수 있는 유형입니다. 그러므로 만약 자신의 열정이 있는 분야의 사람들이 모인 곳이 시골 지역이라면 시골 지역에 살 수도 있다고 생각합니다. 어쨌든 언젠가는 자신이 원하는 그 핵심적인 공간으로 이동해서 살 능력이 있는 유형입니다.  
+개혁, 변화, 도전, 창의성과 잘 어울리는 ENTP에게 보수적이고 변화가 적은 오래된 도시는 맞지 않습니다. 시골 생활을 할 경우 지루하고 발전이 없어 초조하다는 생각을 하기 쉽습니다. 세상의 변화 흐름을 빠르게 따라갈 수 있고 때로는 예기치 못한 기회도 잡을 수 있는 환경에서 사는 것을 추천합니다. 새로운 가치가 만들어지고 많은 관찰할 만한 자극들이 있는 환경에 가서 사는 것이 잘 맞습니다.
+특유의 친화력과 따뜻한 매력으로 현지 사람들과고 금방 친밀해지는 타입입니다. 어디서든 잘 적응할 수 있고 다양한 배경을 가진 친구들을 만들 수 있습니다. 앞으로 거주할 곳에 대한 아주 큰 호불호가 있는 유형은 아닙니다. 도시는 도시대로, 시골은 시골대로 나름의 매력을 찾아내고 사람들과 어울리며 잘 지낼 수 있는 유형입니다.
+ENFP는 젊고 역동적인 도시가 잘 맞습니다. 처음 만난 사람들과도 쉽게 친해질 수 있고 사람들과 어울리는 것도 좋아하는 유형이기 때문에 새로운 도전과 모험도 두려워하지 않기 때문입니다. 비록 유지는 약할 수 있지만 어느 도시에 가서든 사람들을 잘 만나고 모임을 주도할 유형입니다. 즉흥적인 활동과 좋아하고 액티비티를 좋아하기 때문에 이를 즐길 수 있는 인프라와 자연이 있는 곳이라면 더 좋겠죠? 집과 가까운 곳에 인프라가 없으면 운전을 해서 갈 유형입니다. 주변에 대도시도 많고 국립공원도 많은 지역을 추천합니다.
+            "ISTJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ISTP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ISFJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ISFP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+           
+            "INTJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "INTP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "INFJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "INFP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+           
+            "ESTJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ESTP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ESFJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ESFP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+           
+            "ENTJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ENTP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ENFJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ENFP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+           
+        }
+        function start() {
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+        $("#A").click(function(){
+            var type = $("#type").val();
+            var preValue = $("#" + type).val();
+            $("#" + type).val(parseInt(preValue)+1);
+            next()
+        });
+
+        $("#B").click(function(){
+            next()
+        });
+        function load() {
+            $(".result").hide();
+            $(".loading").show();
+            setTimeout(function(){
+                $(".loading").hide();
+                $(".result").show();
+                final();
+            }, 2200);
+            //final();
+        }
+        
+        function next() {
+            if(num ==21) {
+                $(".question").hide();
+                $(".logo").hide();
+                load();
+
+                // if($("#EI").val() < 2) {
+                //     mbti = mbti + "I"
+                // } else {
+                //     mbti = mbti + "E";
+                // }
+
+            } else {
+            $(".progress-bar").attr('style','width: calc(100/20*'+num+'%)');
+            $("#title").html(q[num]["title"]);
+            $("#type").val(q[num]["type"]);
+            $("#A").html(q[num]["A"]);
+            $("#B").html(q[num]["B"]);
+            num++;              
+            }
+        }
+        function final() {
+            $(".result").show();
+            $(".logo").show();
+                var mbti = "";
+                ($("#EI").val() < 3) ? mbti += "I" : mbti += "E";
+                ($("#SN").val() < 3) ? mbti += "N" : mbti += "S";
+                ($("#TF").val() < 3) ? mbti += "F" : mbti += "T";
+                ($("#JP").val() < 3) ? mbti += "P" : mbti += "J";
+                $("#img").attr("src", result[mbti]["img"]);
+                $("#yourtype").html(result[mbti]["yourtype"]);
+                $("#explain").html(result[mbti]["explain"]);
+                $("#explain2").html(result[mbti]["explain2"]);
+                $("#explain3").html(result[mbti]["explain3"]);
+                $("#explain4").html(result[mbti]["explain4"]);
+                $("#explain5").html(result[mbti]["explain5"]);
+                $("#explain7").html(result[mbti]["explain7"]);
+                $("#explain6").html(result[mbti]["explain6"]);
+        }
+    </script>
+<!-- Go to www.addthis.com/dashboard to customize your tools --> 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-614436c9279ecc88"></script>
+
+</body>
+</html>

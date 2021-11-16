@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+    
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI 별 한달 살기 여행지 추천</title>
+    <meta name ="description" content = "내 성격 유형에 맞는 한달 살기 장소는?">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="내 MBTI 별 한달 살기 여행지">
+    <meta property="og:description" content="나랑 맞는 한달 살기 여행지를 MBTI를 기반으로 추천해주는 테스트입니다.">
+    <meta property="og:image" content="https://travel4amonth.netlify.app/logo.png">
+    <meta property="og:url" content="https://travel4amonth.netlify.app/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7310241164176948"
+     crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body class = "container">
+
+     
+    <article class = "start">    
+        <img class="center mt-4" src="logo2.png" alt = "logo">
+  
+        <h1 class = "main-title mt-3 text-center">한달 살기! 내 MBTI와 맞는 도시는?</h1>
+        <h2 class="sub-title mt-3 text-center">코로나만 끝나라! 어디로 가볼까?</h1>
+
+        <div class="start-cover mt-3 mb-3">
+           <button type="button" class="btn-start btn btn-primary" onclick='start();'>내게 맞는 한달 살기 추천 테스트 시작!</button>
+        </div>
+
+    </article>
+
+    <article class= "loading">
+        <div class = "loader">
+    </div>
+    <p></p>    <p></p>    <p></p>    <p></p>    <p></p>    <p></p>  
+    <p></p>
+    <span class="result-yourtype text-center mt-5">결과 계산 중...</span>
+
+    <div class = "container" style = "display:none">
+
+    </div>
+    </article>
+
+    <article class = "question">
+        <img class="center2 mt-2" src="logo2.png" alt = "logo"> 
+        <div class="progress mt-2">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: calc(100/20*1%)" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+      <input id = "type" type= "hidden" value = "EI">
+   
+        <img class="mt-5 slash-element" src="quotation1.png" alt="slash-element">
+        <h2 id="title" class="question-content text-center mt-2 mb-4">문제</h2>
+        <img class="slash-element" src="quotation2.png" alt="slash-element">
+        <input id="type" type="hidden" value="EI">
+        <button id="A" type="button" class="btn-answer btn btn-primary pt-5 pb-5">대답A</button>
+        <button id="B" type="button" class="btn-answer btn btn-primary pt-5 pb-5">대답B</button>
+        <p></p> <p></p> <p></p><p></p> <p></p> 
+        </div>
+
+
+    </article>
+
+    <article class = "result">
+      <span class="result-message mt-4 mb-4">당신의 MBTI에 맞는 한달 살기 지역은 바로...!</span>
+    
+        <img id = "img" class="border border-white mt-2" src = "Bali.jpeg" alt="yourtype">
+        <h2 id = "yourtype" class="result-yourtype text-center mt-5">MBTI</h2>
+        <h3 id="explain" class="result-explain text-center mt-5">설명</h3>
+        <h4 id="explain2" class="result-explain2 text-center mt-5">부가설명</h4> 
+        <h5 id="explain3" class="result-explain3 text-center mt-4">순위2</h5> 
+        <h6 id="explain4" class="result-explain3 text-center mt-3">순위3</h6> 
+        <h7 id="explain5" class="result-explain5 text-center mt-5">최고궁합</h7>
+        <h8 id="explain7" class="result-explain7 text-center mt-3">최고여행지</h8> 
+        <h9 id="explain6" class="result-explain6 text-center mt-4">최악궁합</h9> 
+        <p></p>
+     <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+        <div class="share addthis_inline_share_toolbox mt-5"></div>
+        <p></p> <p></p> <p></p><p></p> <p></p> 
+    </article>
+
+    <article class="logo">
+       <span class="mt-5 text-center copyright-text">Copyright 2021 Tikiwiki all rights reserved</span>
+       <p></p><p></p>
+    </article>
+ 
+
+    <input type = "hidden" id = "EI" value = "0">
+    <input type = "hidden" id = "SN" value = "0">
+    <input type = "hidden" id = "TF" value = "0">
+    <input type = "hidden" id = "JP" value = "0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script>
+        var num = 1;
+        var q = {
+            1: {"title":"불타는 금요일 밤을 앞둔 아침. 나는?", "type": "JP", "A": "주말에 무엇을 할 소 있는 지 정보를 조사하고 예약이 필요하면 한다.", "B": "그날 기분 내키는 대로 실행에 옮긴다."},
+            2: {"title":"새로운 곳에 가서 살게 된다면 어떤 생각이 들까?", "type": "SN", "A": "집세, 교통, 치안, 볼거리, 맛집이 궁금하다.", "B": "살게 될 집, 라이프 스타일, 이웃들과의 관계, 근처 식물 동물 등 오만가지 상상을 하게 된다."},
+            3: {"title":"나는...", "type": "EI", "A": "말 하면서 정리하는 타입", "B": "일단 생각 다 해놓고 공개하는 타입"},
+            4: {"title":"오리엔테이션에 가서 새로운 사람을 만나야 한다. 나는?", "type": "EI", "A": "긴장되지만 사람들을 새로 사귀는 건 어렵지 않다.", "B": "가서 억지 웃음 지으며 새로운 사람들과 친해지려 노력할 걸 생각하면 힘들다."},
+            5: {"title":"프로젝트를 시작하게 됐다. 나는?", "type": "JP", "A": "진행 스케줄과 계획 단계를 세워 놓고 일을 시작하면 더 잘된다.", "B": "처음 시작에 필요한 일을 우선 하면서 그때 그때 필요한 일들을 알아보며 한다."},
+            6: {"title":"좋아하는 친구들과 1박 2일 여행을 다녀왔다. 일반적으로 나는?", "type": "EI", "A": "스트레스가 확 풀렸다.", "B": "재밌었지만 기도 빨렸다. 에너지 충전을 위해 혼자 있는 시간을 보내고 싶다. "},
+            7: {"title":"내가 더 싫어하는 윗 사람은?", "type": "TF", "A": "앞뒤가 맞지 않는 비논리적인 이야기를 하며 화를 내는 유형", "B": "나를 싫어하는 것 같은, 냉정하고 공격적인 유형"},
+            8: {"title":"내가 더 동의하는 생각은?", "type": "TF", "A": "감정은 비이성적이고 주관적이다. 감정이 앞서 일을 그르치는 것은 어리석다.", "B": "주어진 상황과 사람들의 반응을 고려하지 않고 논리만 내세우는 것이 더 어리석다."},
+            9: {"title":"내가 학생 때 좋아했던 과목은?", "type": "SN", "A": "사실과 현상을 다루는 과목 ", "B": "이론을 다루는 과목"},
+            10: {"title":"내가 더 싫어하는 리더는?", "type": "JP", "A": "체계와 틀 없이 애매한 방향성만 이야기하는 리더", "B": "융통성 없이 계획과 규칙의 준수만 강박적으로 중시하는 리더"},
+            11: {"title":"말을 할 때나 행동 모사를 할 때 나는? ", "type": "EI", "A": "몸짓 사용과 목소리도 크고 표정 변화가 많고, 말의 내용도 많다.", "B": "목소리, 몸짓 사용이 많지 않고 말도 아껴서 하는 편이다."},
+            12: {"title":"'긴급한 사정으로 쉽니다' 라는 팻말을 보면 나는? ", "type": "TF", "A": "사정이 있으면 다른 방법이 있을 텐데 영업 시간에 문을 닫는 건 신용에 좋지 않다고 생각한다.", "B": "어쩔 수 없는 긴급한 일이 생겼나 보다. 안타깝다는 생각이 든다."},
+            13: {"title":"내가 더 적응하기 어려운 것은?", "type": "JP", "A": "계속되는 변화", "B": "반복되는 일상"},
+            14: {"title":"내가 하고 싶은 자취 생활은?", "type": "SN", "A": "특별한 나만의 자취 생활을 따로 꿈꿔본 적은 없다.", "B": "해먹고 싶은 요리, 특별한 인테리어, 재밌는 취미 등 생각 해놓은 게 많다."},
+            15: {"title":"내가 더 되고 싶은 사람은?", "type": "TF", "A": "유능한 사람", "B": "따뜻한 사람"},
+            16: {"title":"혼자 집에 있다보면 나는?", "type": "EI", "A": "점차 외롭고 우울해진다.", "B": "에너지가 충전되고 마음이 안정된다. "},
+            17: {"title":"토론 자리에서 나는? ", "type": "SN", "A": "오늘 해야 할 과제와 제시된 아이디어들이 무엇인지 정리하는 역할을 잘한다. ", "B": "새로운 아이디어와 가능성을 제안하는 편이다. "},
+            18: {"title":"내가 듣고 싶은 칭찬은?", "type": "TF", "A": "정말 잘했어. 특히 이 부분에서 뛰어난 실력이 보여서 좋았어.", "B": "정말 수고 많았고 누구보다 열정적인 너를 제일 아껴."},
+            19: {"title":"규칙이 많은 조직에 있는 상황이라면?", "type": "JP", "A": "규칙의 준수로 인해 나도 안정감과 소속감을 느낄 것 같다.", "B": "딱 질색이다. 숨이 막힐 것 같다."},
+            20: {"title":"미술 시간에 나는?", "type": "SN", "A": "따라 그리기, 만들기, 종이 접기를 좋아했다. ", "B": "상상화 등 아이디어를 표현하는 과정에 관심이 많았다."}}
+
+    
+        var result = {
+            "ISTJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ISTP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ISFJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ISFP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+           
+            "INTJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "INTP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "INFJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "INFP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+           
+            "ESTJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ESTP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ESFJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ESFP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+           
+            "ENTJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ENTP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ENFJ" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ENFP" : {"yourtype": "", "explain": "", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+           
+        }
+        function start() {
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+        $("#A").click(function(){
+            var type = $("#type").val();
+            var preValue = $("#" + type).val();
+            $("#" + type).val(parseInt(preValue)+1);
+            next()
+        });
+
+        $("#B").click(function(){
+            next()
+        });
+        function load() {
+            $(".result").hide();
+            $(".loading").show();
+            setTimeout(function(){
+                $(".loading").hide();
+                $(".result").show();
+                final();
+            }, 2200);
+            //final();
+        }
+        
+        function next() {
+            if(num ==21) {
+                $(".question").hide();
+                $(".logo").hide();
+                load();
+
+                // if($("#EI").val() < 2) {
+                //     mbti = mbti + "I"
+                // } else {
+                //     mbti = mbti + "E";
+                // }
+
+            } else {
+            $(".progress-bar").attr('style','width: calc(100/20*'+num+'%)');
+            $("#title").html(q[num]["title"]);
+            $("#type").val(q[num]["type"]);
+            $("#A").html(q[num]["A"]);
+            $("#B").html(q[num]["B"]);
+            num++;              
+            }
+        }
+        function final() {
+            $(".result").show();
+            $(".logo").show();
+                var mbti = "";
+                ($("#EI").val() < 3) ? mbti += "I" : mbti += "E";
+                ($("#SN").val() < 3) ? mbti += "N" : mbti += "S";
+                ($("#TF").val() < 3) ? mbti += "F" : mbti += "T";
+                ($("#JP").val() < 3) ? mbti += "P" : mbti += "J";
+                $("#img").attr("src", result[mbti]["img"]);
+                $("#yourtype").html(result[mbti]["yourtype"]);
+                $("#explain").html(result[mbti]["explain"]);
+                $("#explain2").html(result[mbti]["explain2"]);
+                $("#explain3").html(result[mbti]["explain3"]);
+                $("#explain4").html(result[mbti]["explain4"]);
+                $("#explain5").html(result[mbti]["explain5"]);
+                $("#explain7").html(result[mbti]["explain7"]);
+                $("#explain6").html(result[mbti]["explain6"]);
+        }
+    </script>
+<!-- Go to www.addthis.com/dashboard to customize your tools --> 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-614436c9279ecc88"></script>
+
+</body>
+</html>

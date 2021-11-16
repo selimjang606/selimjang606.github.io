@@ -1,0 +1,250 @@
+/* .start {
+    display: flex;
+    flex-direction:column;
+} */
+/* 전체 */
+body {
+    background-color: #ffffff;
+    color: #111111;
+    font-family: 'Gowun Dodum', sans-serif;
+    background-image: ("space.png");
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+  }
+
+
+article {
+    display: flex;
+    flex-direction:column;
+}
+
+.copyright-text {
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    color: #4e4e4e;
+}
+
+/* 시작화면 */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+  }
+.center2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+  }
+
+
+.question {
+    display:none;
+}
+
+.main-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #282828;
+}
+.sub-title {
+    font-size: 24px;
+    font-weight: 100;
+    color: #3c3c3c;
+}
+.updown-slash {
+    width: 166px;
+    margin: 0 auto;
+}
+.start-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-start {
+    font-size: 16px;
+    color:#ffffff;
+    background-color: #282828;
+    border:#646464;
+}
+.btn-start, .btn-start:visited, .btn-start:hover, .btn-start:active {
+    font-size: 18px;
+    color:#ffffff;
+    background-color: #282828;
+    border:#646464;
+}
+.btn-start:active, .btn-start:focus {
+    background-color: #ffffff !important;
+    border:#646464 !important;
+    font-size: 16px;
+    color:#ffffff;
+}
+
+
+
+/* 문제 화면 */
+.btn-answer, .btn-answer:visited, .btn-answer:hover, .btn-answer:active, .btn-answer:focus {
+    background-color: #646464;
+    border:#646464;
+    width: 288px;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #ffffff;
+}
+.btn-answer:hover {
+    background-color: #50c2ff !important;
+    border:#646464 !important;
+    width: 288px;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #ffffff;
+}
+.progress-bar {
+    background-color: #50c2ff;
+}
+.progress {
+    background-color: #525764;
+}
+.likelion-logo {
+    width: 96px;
+    margin: 0 auto;
+}
+.slash-element {
+    width: 24px;
+    margin: 0 auto;
+}
+.question-content {
+    font-size: 20px;
+    color: #3c3c3c;
+}
+.rectangle {
+    width: 320px;
+    height: 8px;
+    background-color: #383a43;
+    margin: 0 auto;
+}
+.mid-rectangle {
+    width: 320px;
+    height: 1px;
+    background-color: #383a43;
+    margin: 0 auto;
+}
+
+/* Loading */
+
+.loader {
+    display: flex;
+    position: absolute;
+    left:50%;
+    top:40%;
+    z-index:1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+.loading {
+    display:none;
+}
+
+@-webkit-keyframes spin {
+    0% {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin{
+    0% {transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.loading-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0d28be;
+}
+
+
+/* 결과 화면 */
+.result-message {
+    color: #3f3f3fdc;
+    margin: 0 auto;
+    font-size: 28px;
+    font-weight: 100;
+}
+.result-yourtype {
+    font-size: 24px;
+    font-weight: bold;
+    color: #101010;
+}
+.result-explain {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0d28be;
+}
+.result-explain2 {
+    font-size: 15px;
+    font-weight: normal;
+    color: #383a43;
+}
+
+.result-explain3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0d28be;
+}
+
+.result-explain5 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #162653;
+}
+
+.result-explain6 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #af2027;
+}
+.result-explain7 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #303030;
+}
+
+
+.again {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 165px;
+    height: 60px;
+  }
+
+
+.share-message {
+    margin: 0 auto;
+    color:#323232;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.result {
+    display:none;
+}
+
+#img {
+    width: 75%;
+    margin: 0 auto
+}
+
+.share {
+ margin: 0 auto;   
+}
+
+
