@@ -33,8 +33,8 @@
     <article class = "start">    
         <img class="center mt-4" src="Eng_logo.png" alt = "logo">
   
-        <h1 class = "main-title mt-3 text-center">FIND YOUR IDEAL CITY</h1>
-        <h2 class="sub-title mt-3 text-center">Based on Myers–Briggs Type Indicator (MBTI) personality test, <p> you can find your ideal place for taking a month of travel from work!</h1>
+        <h1 class = "main-title mt-3 text-center">Find your ideal city!</h1>
+        <h2 class="sub-title mt-3 text-center">Based on MBTI (Myers–Briggs Type Indicator) personality test, you can find your ideal place for taking a month of travel from work. </h1>
 
         <div class="start-cover mt-3 mb-3">
            <button type="button" class="btn-start btn btn-primary" onclick='start();'>Start Your Journey!</button>
@@ -55,18 +55,18 @@
     </article>
 
     <article class = "question">
-        <img class="center2 mt-2" src="Eng_logo.png" alt = "logo"> 
+        <img class="center2 mt-2" src="logo2.png" alt = "logo"> 
         <div class="progress mt-2">
             <div class="progress-bar progress-bar-striped" role="progressbar" style="width: calc(100/20*1%)" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
       <input id = "type" type= "hidden" value = "EI">
    
         <img class="mt-5 slash-element" src="quotation1.png" alt="slash-element">
-        <h2 id="title" class="question-content text-center mt-2 mb-4">문제</h2>
+        <h2 id="title" class="question-content text-center mt-2 mb-4">Question</h2>
         <img class="slash-element" src="quotation2.png" alt="slash-element">
         <input id="type" type="hidden" value="EI">
-        <button id="A" type="button" class="btn-answer btn btn-primary pt-5 pb-5">대답A</button>
-        <button id="B" type="button" class="btn-answer btn btn-primary pt-5 pb-5">대답B</button>
+        <button id="A" type="button" class="btn-answer btn btn-primary pt-5 pb-5">OptionA</button>
+        <button id="B" type="button" class="btn-answer btn btn-primary pt-5 pb-5">OptionB</button>
         <p></p> <p></p> <p></p><p></p> <p></p> 
         </div>
 
@@ -74,7 +74,7 @@
     </article>
 
     <article class = "result">
-      <span class="result-message mt-4 mb-4">Your Ideal Place is...!</span>
+      <span class="result-message mt-4 mb-4">당신의 MBTI에 맞는 한달 살기 지역은 바로...!</span>
     
         <img id = "img" class="border border-white mt-2" src = "Bali.jpeg" alt="yourtype">
         <h2 id = "yourtype" class="result-yourtype text-center mt-5">MBTI</h2>
@@ -82,6 +82,9 @@
         <h4 id="explain2" class="result-explain2 text-center mt-5">부가설명</h4> 
         <h5 id="explain3" class="result-explain3 text-center mt-4">순위2</h5> 
         <h6 id="explain4" class="result-explain3 text-center mt-3">순위3</h6> 
+        <h7 id="explain5" class="result-explain5 text-center mt-5">최고궁합</h7>
+        <h8 id="explain7" class="result-explain7 text-center mt-3">최고여행지</h8> 
+        <h9 id="explain6" class="result-explain6 text-center mt-4">최악궁합</h9> 
         <p></p>
      <!-- Go to www.addthis.com/dashboard to customize your tools --> 
         <div class="share addthis_inline_share_toolbox mt-5"></div>
@@ -104,9 +107,9 @@
     <script>
         var num = 1;
         var q = {
-            1: {"title":"For a weekend, I usually", "type": "JP", "A": "think and investigate about plans.", "B": "just do whatever in mind."},
-            2: {"title":"If you are exploring a new place to live, you would do...", "type": "SN", "A": "Check house price, safety, transportation, school district, etc. ", "B": "Check out cultures, vibes, life styles, neighborhoods and imagine how your life would be changed."},
-            3: {"title":"When I talk to others,", "type": "EI", "A": "I am a talkative person. So sometimes my ideas are more organized by the talk", "B": "I'd rather talk about some ideas or thoughts that I already finished to think"},
+            1: {"title":"For a weekend, I usually", "type": "JP", "A": "think and investigate what to do and make plans", "B": "just do whatever in mind"},
+            2: {"title":"If you live in a new place, you would think that...", "type": "SN", "A": "집세, 교통, 치안, 볼거리, 맛집이 궁금하다.", "B": "살게 될 집, 라이프 스타일, 이웃들과의 관계, 근처 식물 동물 등 오만가지 상상을 하게 된다."},
+            3: {"title":"When I talk to others,", "type": "EI", "A": "I am a talkative person. So sometimes I can organize my ideas through the talk", "B": "I'd rather talk about some ideas or thoughts that I already finished to think"},
             4: {"title":"When I go to a new social event", "type": "EI", "A": "I feel rather excited to make new freinds.", "B": "I feel nervous and exhausted to put efforts to find someone to talk."},
             5: {"title":"When I start a class project,", "type": "JP", "A": "I tend to make plans and schedules first before starting.", "B": "I tend to put some ideas into practice first, and then make plans."},
             6: {"title":"After a fun trip with your friends,", "type": "EI", "A": "You become more energized. You would feel like your stress was relieved", "B": "You would feel excited for the trip, but you would feel exhausted too. You need time alone to find some energy."},
@@ -127,26 +130,26 @@
 
     
         var result = {
-            "ISTJ" : {"yourtype": "Your personality type: ISTJ (Inspector- Introverted, Sensing, Thinking, Judging)", "explain": "Your Ideal Place: Tokyo, Japan", "explain2":"Keywords: responsible, realistic, logical, traditional, observant, present-focused", "explain3":"",  "explain4":"", "img":"Tokyo.jpeg"},
-            "ISTP" : {"yourtype": "Your personality type: ISTP (Crafter- Introverted, Sensing, Thinking, Perceiving)", "explain": "Your Ideal Place: Island", "explain2":"Keywords: logical, action-oriented, learns by experience, Enjoys new things, Risk-taker", "explain3":"",  "explain4":"",   "img":"Iceland.jpeg"},
-            "ISFJ" : {"yourtype": "Your personality type: ISFJ (Protector- Introverted, Sensing, Feeling, Judging)", "explain": "Your Ideal Place: Porto, Portugal", "explain2":"Keywords: reliable, practical, sensitive, eye for detail", "explain3":"",  "explain4":"", "img":"Porto.jpeg"},
-            "ISFP" : {"yourtype": "Your personality type: ISFP (Composer - Introverted, Sensing, Feeling, Perceiving)", "explain": "Your Ideal Place: Provence, France", "explain2":"Keywords: Loyal to values and beliefs, Enjoys hands-on learning, Need for personal space, reserved", "explain3":"",  "explain4":"","img":"Provence.jpeg"},
+            "ISTJ" : {"yourtype": "Your personality type: ISTJ", "explain": "Your Ideal Place: Tokyo, Japan", "explain2":"Keywords: ", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Tokyo.jpeg"},
+            "ISTP" : {"yourtype": "Your personality type: ISTP", "explain": "Your Ideal Place: Island", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Iceland.jpeg"},
+            "ISFJ" : {"yourtype": "Your personality type: ISFJ", "explain": "Your Ideal Place: Porto, Portugal", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Porto.jpeg"},
+            "ISFP" : {"yourtype": "Your personality type: ISFP", "explain": "Your Ideal Place: Provence, France", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Provence.jpeg"},
            
-            "INTJ" : {"yourtype": "Your personality type: INTJ (Architect - Introverted, Intuitive, Thinking, Judging)", "explain": "Your Ideal Place: Switzerland", "explain2":"Keywords: Good at listening, self-confident, hard-working, theorectical, perfectionism", "explain3":"",  "explain4":"",  "img":"Swiss.jpeg"},
-            "INTP" : {"yourtype": "Your personality type: INTP (Thinker - Introverted, Intuitive, Thinking, Perceiving)", "explain": "Your Ideal Place: Cuba", "explain2":"Keywords: Independent, logical, objective, loyal and affectionate with loved ones, abstract thnker, struggles to follow rules", "explain3":"",  "explain4":"", "img":"Cuba.jpeg"},
-            "INFJ" : {"yourtype": "Your personality type: INFJ (Counselor - Introverted, Intuitive, Feeling, Judging)", "explain": "Your Ideal Place: Kansai, Japan", "explain2":"Keywords: Values close, deep relationships, Sensitive to the needs of others, reserved, idealistic", "explain3":"",  "explain4":"",  "img":"Kansai.jpeg"},
-            "INFP" : {"yourtype": "Your personality type: INFP (Healer - Introverted, Intuitive, Feeling, Perceiving)", "explain": "Your Ideal Place: Bolivia and Peru", "explain2":"Keywords: Sensitive to feelings, loyal and devoted, good at seeing big pictures, idealistic", "explain3":"",  "explain4":"",   "img":"Bolivia.jpeg"},
+            "INTJ" : {"yourtype": "Your personality type: INTJ", "explain": "Your Ideal Place: Switzerland", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Swiss.jpeg"},
+            "INTP" : {"yourtype": "Your personality type: INTP", "explain": "Your Ideal Place: Cuba", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Cuba.jpeg"},
+            "INFJ" : {"yourtype": "Your personality type: INFJ", "explain": "Your Ideal Place: Kansai, Japan", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Kansai.jpeg"},
+            "INFP" : {"yourtype": "Your personality type: INFP", "explain": "Your Ideal Place: Bolivia and Peru", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Bolivia.jpeg"},
            
-            "ESTJ" : {"yourtype": "Your personality type: ESTJ (Director- Extraverted, Sensing, Thinking, Judging)", "explain": "Your Ideal Place: Hong Kong", "explain2":"Keywords: practical, realistic, self-confident, traditional, leadship skills, bossy, argumentative", "explain3":"",  "explain4":"",  "img":"Hongkong.jpeg"},
-            "ESTP" : {"yourtype": "Your personality type: ESTP (Promoter- Extraverted, Sensing, Thinking, Perceiving)", "explain": "Your Ideal Place: Bang Kok, Thailand", "explain2":"Keywords: gregarious, funny, energetic, persuasive, influencial, adaptable, action-oriented, easily bored", "explain3":"",  "explain4":"",  "img":"Bangkok.jpeg"},
-            "ESFJ" : {"yourtype": "Your personality type: ESFJ (Cargiver - Extroverted, Sensing, Feeling, Judging)", "explain": "Your Ideal Place: Amsterdam, Netherlands", "explain2":"Keywords: kind, loyal, outgoing, organized, enjoy helping others, conscientious, dislike change, controlling", "explain3":"",  "explain4":"",  "img":"Amsterdam.jpeg"},
-            "ESFP" : {"yourtype": "Your personality type: ESFP (Performer- Extraverted, Sensing, Feeling, Perceiving)", "explain": "Your Ideal Place: Rio De Janeiro, Brazil", "explain2":"Keywords: Optimistic, practical, sociable, spontaneous, focused on the present, impulsive, easily bored, does not plan ahead", "explain3":"",  "explain4":"",  "img":"RiodeJaneiro.jpeg"},
+            "ESTJ" : {"yourtype": "Your personality type: ESTJ", "explain": "Your Ideal Place: Hong Kong", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Hongkong.jpeg"},
+            "ESTP" : {"yourtype": "Your personality type: ESTP", "explain": "Your Ideal Place: Bang Kok, Thailand", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Bangkok.jpeg"},
+            "ESFJ" : {"yourtype": "Your personality type: ESFJ", "explain": "Your Ideal Place: Amsterdam, Netherlands", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Amsterdam.jpeg"},
+            "ESFP" : {"yourtype": "Your personality type: ESFP", "explain": "Your Ideal Place: Rio De Janeiro, Brazil", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"RiodeJaneiro.jpeg"},
            
-            "ENTJ" : {"yourtype": "Your personality type: ENTJ (Commander - Extraverted, Intuitive, Thinking, Judging)", "explain": "Your Ideal Place: South Island, New Zealand", "explain2":"Keywords: self-assured, well-organized, strong leadship skills, strong communication skills, assertive, outspken, aggressive", "explain3":"",  "explain4":"",  "img":"NewZealand.jpeg"},
-            "ENTP" : {"yourtype": "Your personality type: ENTP (Debater - Extroverted, Intuitive, Thinking, Perceiving)", "explain": "Your Ideal Place: Barcelona, Spain", "explain2":"Keywords: Innovative, Values knowledge, creative, strong communication skills, argumentative", "explain3":"",  "explain4":"",  "img":"Barcelona.jpeg"},
-            "ENFJ" : {"yourtype": "Your personality type: ENFJ (Giver - Extraverted, Intuitive, Feeling, Judging)", "explain": "Your Ideal Place: Bali, Indonesia", "explain2":"Keywords: warm-hearted, empathetic, outgoing, encouraging, affectionate, persuasive, indecisive", "explain3":"",  "explain4":"", "img":"Bali.jpeg"},
-            "ENFP" : {"yourtype": "Your personality type: ENFP (Champion - Extraverted, Intuitive, Feeling, Perceiving)", "explain": "Your Ideal Place: Vientiane, Laos", "explain2":"Keywords: Fun, Strong people skills, enthusiastic, empathetic, spontaneous, creative, emotional, disorganized", "explain3":"",  "explain4":"",  "img":"Biantiane.jpeg"},
-            
+            "ENTJ" : {"yourtype": "Your personality type: ENTJ", "explain": "Your Ideal Place: South Island, New Zealand", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"NewZealand.jpeg"},
+            "ENTP" : {"yourtype": "Your personality type: ENTP", "explain": "Your Ideal Place: Barcelona, Spain", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Barcelona.jpeg"},
+            "ENFJ" : {"yourtype": "Your personality type: ENFJ", "explain": "Your Ideal Place: Bali, Indonesia", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Bali.jpeg"},
+            "ENFP" : {"yourtype": "Your personality type: ENFP", "explain": "Your Ideal Place: Vientiane, Laos", "explain2":"", "explain3":"",  "explain4":"",  "explain5":"", "explain6": "",  "explain7":"",  "img":"Biantiane.jpeg"},
+           
         }
         function start() {
             $(".start").hide();
