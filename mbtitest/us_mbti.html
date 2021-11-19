@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="Eng">
     
 <head>
 
@@ -11,11 +11,12 @@
     <meta property="og:title" content="Find your personalized city">
     <meta property="og:description" content="Find your ideal city for a 1 month trip from a personality test">
     <meta property="og:image" content="https://selimjang606.github.io/mbtitest/Eng_logo.png">
-    <meta property="og:url" content="https://travel4amonth.netlify.app/">
+    <meta property="og:url" content="https://selimjang606.github.io/mbtitest/us_mbti.html">  
+    <link rel="shortcut icon" type="image/x-icon" href="icon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -33,11 +34,11 @@
     <article class = "start">    
         <img class="center mt-4" src="Eng_logo.png" alt = "logo">
   
-        <h1 class = "main-title mt-3 text-center">FIND YOUR IDEAL CITY</h1>
+        <h1 class = "main-title mt-3 text-center">FIND YOUR IDEAL CITY!</h1>
         <h2 class="sub-title mt-3 text-center">Based on Myers–Briggs Type Indicator (MBTI) personality test, <p> you can find your ideal place for taking a month of travel from work!</h1>
 
         <div class="start-cover mt-3 mb-3">
-           <button type="button" class="btn-start btn btn-primary" onclick='start();'>Start Your Journey!</button>
+           <button type="button" class="btn-start btn btn-primary" onclick='start();'>START YOUR JOURNEY</button>
         </div>
 
     </article>
@@ -47,7 +48,7 @@
     </div>
     <p></p>    <p></p>    <p></p>    <p></p>    <p></p>    <p></p>  
     <p></p>
-    <span class="result-yourtype text-center mt-5">Loading...</span>
+    <span class="result-yourtype text-center mt-5">Calculating...</span>
 
     <div class = "container" style = "display:none">
 
@@ -74,7 +75,7 @@
     </article>
 
     <article class = "result">
-      <span class="result-message mt-4 mb-4">Your Ideal Place is...!</span>
+      <span class="result-message mt-4 mb-4">Where's Your Ideal Place to Live for a Month?</span>
     
         <img id = "img" class="border border-white mt-2" src = "Bali.jpeg" alt="yourtype">
         <h2 id = "yourtype" class="result-yourtype text-center mt-5">MBTI</h2>
@@ -104,26 +105,26 @@
     <script>
         var num = 1;
         var q = {
-            1: {"title":"For a weekend, I usually", "type": "JP", "A": "think and investigate about plans.", "B": "just do whatever in mind."},
-            2: {"title":"If you are exploring a new place to live, you would do...", "type": "SN", "A": "Check house price, safety, transportation, school district, etc. ", "B": "Check out cultures, vibes, life styles, neighborhoods and imagine how your life would be changed."},
-            3: {"title":"When I talk to others,", "type": "EI", "A": "I am a talkative person. So sometimes my ideas are more organized by the talk", "B": "I'd rather talk about some ideas or thoughts that I already finished to think"},
-            4: {"title":"When I go to a new social event", "type": "EI", "A": "I feel rather excited to make new freinds.", "B": "I feel nervous and exhausted to put efforts to find someone to talk."},
-            5: {"title":"When I start a class project,", "type": "JP", "A": "I tend to make plans and schedules first before starting.", "B": "I tend to put some ideas into practice first, and then make plans."},
-            6: {"title":"After a fun trip with your friends,", "type": "EI", "A": "You become more energized. You would feel like your stress was relieved", "B": "You would feel excited for the trip, but you would feel exhausted too. You need time alone to find some energy."},
-            7: {"title":"Who is the leader you hate more?", "type": "TF", "A": "too emotional or irrational", "B": "cold-hearted or inconsiderate"},
-            8: {"title":"I agree with the idea that...", "type": "TF", "A": "Being too much emotional is bad, because it makes you irrational and too much subjective.", "B": "Being too much rational is also bad, because it makes you ignore people's negative reactions."},
+            1: {"title":"For a weekend, I usually", "type": "JP", "A": "Think and investigate about plans.", "B": "Just do whatever in mind."},
+            2: {"title":"If you are exploring a new place to live, you would consider...", "type": "SN", "A": "House price, safety, transportation, school district, etc. ", "B": "Cultures, vibes, life styles, neighborhoods based on how your life would be changed"},
+            3: {"title":"When I talk to others,", "type": "EI", "A": "I am a talkative person. So sometimes my idea can be more organized when I am talking.", "B": "I usually talk about my ideas or thoughts that I already finished to think."},
+            4: {"title":"When I go to a new social event", "type": "EI", "A": "I feel more excited to make new freinds.", "B": "I feel more nervous and exhausted."},
+            5: {"title":"When I start a class project,", "type": "JP", "A": "I tend to make plans and schedules first before starting.", "B": "I tend to put some ideas into practice first and make plans."},
+            6: {"title":"After a fun trip with your friends,", "type": "EI", "A": "You become more energized. You would feel like your stress was relieved.", "B": "You would feel excited for the trip, but you would feel exhausted as well. You need time alone to find some energy."},
+            7: {"title":"Who is the leader you hate more?", "type": "TF", "A": "Too emotional or irrational", "B": "Cold-hearted or inconsiderate"},
+            8: {"title":"The way I don't want to be is", "type": "TF", "A": "Being irrational and too much subjective.", "B": "Being too rational and ignoring people's negative reactions."},
             9: {"title":"I like...", "type": "SN", "A": "Classes about facts and phenomenons", "B": "Theorectical classes"},
-            10: {"title":"To me, a team leader who is more difficult to work with is:", "type": "JP", "A": "a person who is not giving clear directions", "B": "a person who is too strict and not adaptable"},
-            11: {"title":"When I am speaking,", "type": "EI", "A": "I use lots of words, gestures and facial expressions", "B": "I rarely use dynamic expressions. I am a quiet person"},
-            12: {"title":"Suppose that you find a sign that 'Closed due to family emergency' in front of the door of a store.", "type": "TF", "A": "You would rather be more disappointed by their unreliable behavior.", "B": "You would rather be more passionated about the emergent situation."},
-            13: {"title":"I find it more difficult to adapt to", "type": "JP", "A": "constant changes", "B": "repeated daily life"},
-            14: {"title":"About my ideal style of living, ", "type": "SN", "A": "I do not have a special, unique style of living that I've imagined for a long time.", "B": "I have a lot of ideas about my own ways I have imagined for a long time."},
-            15: {"title":"I would like to be a person (or I think I am a person)", "type": "TF", "A": "who is competent or successful", "B": "who is caring, warm-hearted, or passionaite"},
-            16: {"title":"When I am at home alone,", "type": "EI", "A": "I become lonely and depressed", "B": "I can find more energy and some piece of mind"},
-            17: {"title":"In a discussion, I am...", "type": "SN", "A": "a person who is summarizing and organizing ideas", "B": "a person who is providing new ideas and suggestions"},
-            18: {"title":"I would feel happier if I could hear...", "type": "TF", "A": "I'm very pleased with your work. You did an excellent job!", "B": "You're amazing. I'm so lucky to have you."},
-            19: {"title":"If I were in a member of an organization with rules and restrictions", "type": "JP", "A": "I am okay with it, because it also gives me a sense of belonging and engagement with the group.", "B": "It is not okay. I really hate it."},
-            20: {"title":"In an art class, I am more interested in...", "type": "SN", "A": "describing, and/or imitating (e.g., origamy) ", "B": "expression of my own ideas"}}
+            10: {"title":"To me, a team leader who is more difficult to work with is:", "type": "JP", "A": "A person who is rarely giving clear directions.", "B": "A person who is too strict and not adaptable."},
+            11: {"title":"When I am speaking,", "type": "EI", "A": "I use lots of words, gestures and facial expressions", "B": "I rarely use dynamic expressions and words."},
+            12: {"title":"Suppose that you find a sign that 'Closed due to family emergency' in front of the door of a store.", "type": "TF", "A": "You would rather be more disappointed by their unreliable behavior.", "B": "You would rather be more sympathetic for the emergent situation."},
+            13: {"title":"I find it more difficult to adapt to", "type": "JP", "A": "Constant changes", "B": "Repeated daily life"},
+            14: {"title":"About my ideal style of living, ", "type": "SN", "A": "I don't have a special, unique style of living that I've imagined for a long time.", "B": "I have many ideas of my own living styles that I have imagined for a long time."},
+            15: {"title":"I would like to be a person who is... (or I think I am a person)", "type": "TF", "A": "Competent or successful", "B": "Warm-hearted, or passionate"},
+            16: {"title":"When I am at home alone,", "type": "EI", "A": "I end up feeling lonely.", "B": "I can find some piece of mind."},
+            17: {"title":"In a discussion, I am...", "type": "SN", "A": "Summarizing and organizing ideas", "B": "Providing new ideas and suggestions"},
+            18: {"title":"I would feel happier if I could hear...", "type": "TF", "A": "You did an excellent job! I'm very pleased with your work.", "B": "You're amazing. I'm so lucky to have you."},
+            19: {"title":"If I were in a member of an organization with rules and restrictions", "type": "JP", "A": "I am okay with it. It somewhat gives me a sense of belonging and engagement with the group.", "B": "It is not okay. I really hate it."},
+            20: {"title":"In an art class, I am more interested in...", "type": "SN", "A": "Describing, and/or imitating (e.g., origamy)", "B": "Expressing my own ideas"}}
 
     
         var result = {

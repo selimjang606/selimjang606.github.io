@@ -6,7 +6,7 @@
 body {
     background-color: #ffffff;
     color: #111111;
-    font-family: 'Gowun Dodum', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-image: ("space.png");
     background-position: 0 0, 25px 25px;
     background-size: 50px 50px;
@@ -19,7 +19,7 @@ article {
 }
 
 .copyright-text {
-    font-family: "Noto Sans KR";
+
     font-size: 12px;
     color: #4e4e4e;
 }
@@ -89,7 +89,7 @@ article {
     border:#646464;
     width: 288px;
     margin: 0 auto;
-    font-size: 13px;
+    font-size: 15px;
     color: #ffffff;
 }
 .btn-answer:hover {
@@ -97,7 +97,7 @@ article {
     border:#646464 !important;
     width: 288px;
     margin: 0 auto;
-    font-size: 13px;
+    font-size: 15px;
     color: #ffffff;
 }
 .progress-bar {
@@ -136,19 +136,19 @@ article {
 .loader {
     display: flex;
     position: absolute;
-    left:50%;
+    left:51%;
     top:40%;
     z-index:1;
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
     margin: -75px 0 0 -75px;
     border: 16px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 16px solid #3498db;
+    border-top: 16px solid #01748b;
     width: 100px;
     height: 100px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
+    -webkit-animation: spin 2.4s linear infinite;
+    animation: spin 2.4s linear infinite;
 }
 .loading {
     display:none;
@@ -165,7 +165,7 @@ article {
 }
 
 .loading-text {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     color: #0d28be;
 }
@@ -179,7 +179,7 @@ article {
     font-weight: 100;
 }
 .result-yourtype {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #101010;
 }
