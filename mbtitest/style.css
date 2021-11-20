@@ -186,30 +186,32 @@ article {
 .result-explain {
     font-size: 18px;
     font-weight: bold;
-    color: #0d28be;
+
+    color: #4d4d4d;
 }
 .result-explain2 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: normal;
+    font-style: italic;
     color: #383a43;
 }
 
 .result-explain3 {
     font-size: 16px;
     font-weight: bold;
-    color: #0d28be;
+    color: #3f5497;
 }
 
 .result-explain5 {
     font-size: 16px;
     font-weight: bold;
-    color: #162653;
+    color: #aa5695;
 }
 
 .result-explain6 {
     font-size: 16px;
     font-weight: bold;
-    color: #af2027;
+    color: #be3e44;
 }
 .result-explain7 {
     font-size: 16px;
